@@ -240,7 +240,7 @@ Here, we'll use df_test as the unseen, future data
 
 Listing customers who have a churn probability higher than 70%. These are the ones who can be targeted immediately
 
-<p align="center"> <img src="img/image055.png"> </p>
+<p align="center"> <img src="img/image053.png"> </p>
 
 Got 124 customers who can leave the bank with more than 70% probability
 
