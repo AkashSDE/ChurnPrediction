@@ -40,13 +40,13 @@ Metric(s):
 Dataset download link - <https://s3.amazonaws.com/hackerday.datascience/360/Churn_Modelling.csv>
 
 <p align="center">
-<img src="img/image001.jpg">
+<img src="img/image001.png">
 </p>
 
 **Target column – Exited (0/1)**
 
 <p align="center">
-<img src="img/image003.jpg">
+<img src="img/image003.png">
 </p>
 
 **Steps performed**
@@ -66,26 +66,26 @@ Dataset download link - <https://s3.amazonaws.com/hackerday.datascience/360/Chur
 
     <p>– Box plot and PDF of the numerical feature are analyzed</p>
 
-    <p align="center"> <img src="img/image005.jpg"> </p>
+    <p align="center"> <img src="img/image005.png"> </p>
 
     <p>– Count plot for categorical features</p>
 
-    <p align="center"> <img src="img/image007.jpg"> </p>
+    <p align="center"> <img src="img/image007.png"> </p>
 
 
 -   **Bivariate analysis**
 
     – Analysis of correlations of Numerical feature with target variables.
 
-    <p align="center"> <img src="img/image009.jpg"> </p>
+    <p align="center"> <img src="img/image009.png"> </p>
 
     – Association of categorical features with target variables.
 
-    <p align="center"> <img src="img/image011.jpg"> </p>
+    <p align="center"> <img src="img/image011.png"> </p>
 
 -   **Missing Value and Outlier Treatment**
 
-    <p align="center"> <img src="img/image013.jpg"> </p>
+    <p align="center"> <img src="img/image013.png"> </p>
 
 -   No missing value
 -   Based on Univariate analysis outlier treatment is not required
@@ -116,9 +116,9 @@ Created some new features based on simple interactions between the existing feat
 
 Linear association of new columns with target variables to judge importance can be seen from heatmap below:
 
-<p align="center"> <img src="img/image015.jpg"> </p>
+<p align="center"> <img src="img/image015.png"> </p>
 
-<p align="center"> <img src="img/image017.jpg"> </p>
+<p align="center"> <img src="img/image017.png"> </p>
 
 ### D. **Feature Selection**
 
@@ -130,20 +130,20 @@ Using **RFE (Recursive Feature Elimination)** to check whether it gives us the s
 
 **RFE using Logistic Regression Model – Important Features**
 
-<p align="center"> <img src="img/image019.jpg"> </p>
+<p align="center"> <img src="img/image019.png"> </p>
 
 **RFE using Decision Tree Model – Important Features**
 
-<p align="center"> <img src="img/image021.jpg"> </p>
+<p align="center"> <img src="img/image021.png"> </p>
 
 ### E.  **Baseline model Results**
-<p align="center"> <img src="img/Picture1.jpg"> </p>
+<p align="center"> <img src="img/Picture1.png"> </p>
 
 **Tree-based model performed best**
 
 **Decision tree rule engine visualization**
 
-   <p align="center"> <img src="img/image025.jpg"> </p>
+   <p align="center"> <img src="img/image025.png"> </p>
 
 ### F. **Spot – Checking Various ML Algorithms**
 <b> steps<b>
@@ -151,13 +151,13 @@ Using **RFE (Recursive Feature Elimination)** to check whether it gives us the s
 -   Automate data preparation and model run through Pipelines – Created class for automating Categorical encoding, Adding Feature and Custom Scaler
 -   Model Zoo: List of all models to compare/spot-check
 
-    <p align="center"> <img src="img/image027.jpg"> </p>
+    <p align="center"> <img src="img/image027.png"> </p>
 
 -   Evaluate using k-fold Cross validation framework – Used 5 fold cross validation and optimize for recall as well as f1-score metric.
 
 **Result of spot checking**
 
-<p align="center"> <img src="img/image029.jpg"> </p>
+<p align="center"> <img src="img/image029.png"> </p>
 
 **LightGBM is chosen for further hyperparameter tuning because it has the best performance on recall metric, and it came close second when comparing using F1-scores.**
 
@@ -165,7 +165,7 @@ Using **RFE (Recursive Feature Elimination)** to check whether it gives us the s
 -   Used step wise grid search CV to find the best parameter
 -   Final set of parameters for the best model
 
-  <p align="center"> <img src="img/image031.jpg"> </p>
+  <p align="center"> <img src="img/image031.png"> </p>
 
 -   **To handle class imbalance used class weight ratio to provide more weight to the minority class**
 ### H.  **Error Analysis**
@@ -174,7 +174,7 @@ After getting the final LGBM model we can do the error analysis of the predictio
 
 -   Visualizing distribution of predicted probabilities vs true class
 
-  <p align="center"> <img src="img/image033.jpg"> </p>
+  <p align="center"> <img src="img/image033.png"> </p>
 
 \# Ideally the separation should be there at 0.5 threshold
 
@@ -186,25 +186,25 @@ After getting the final LGBM model we can do the error analysis of the predictio
 
     The difference in distribution of these features across the two classes help us to test a few hypotheses
 
-    <p align="center"> <img src="img/image035.jpg"> </p>
+    <p align="center"> <img src="img/image035.png"> </p>
 
-    <p align="center"> <img src="img/image037.jpg"> </p>
+    <p align="center"> <img src="img/image037.png"> </p>
 
-    <p align="center"> <img src="img/image039.jpg"> </p>
+    <p align="center"> <img src="img/image039.png"> </p>
 
 -   **Extracting the subset of incorrect predictions**
 
     All incorrect predictions are extracted and categorized into false positives (low precision) and false negatives (low recall)
 
-    <p align="center"> <img src="img/image041.jpg"> </p>
+    <p align="center"> <img src="img/image041.png"> </p>
 
 -   We can see the prob of errors and try to tune the threshold to avoid the errors e.g. in the low precision case we can see that prob is near to 0.53 or 0.502 so if we increase the threshold to 0.55 then We can make correct prediction and hence achieve high precision
 
-    <p align="center"> <img src="img/image043.jpg"> </p>
+    <p align="center"> <img src="img/image043.png"> </p>
 
     **\# Most of the prediction is between 0.3-0.4 for low recall errors**
 
-   <p align="center"> <img src="img/image045.jpg"> </p>
+   <p align="center"> <img src="img/image045.png"> </p>
    
    \# here most of the prob is 0.6 so if we shift the threshold to 0.6 then we may get high precision
 
@@ -212,7 +212,7 @@ After getting the final LGBM model we can do the error analysis of the predictio
 
 **\# if we just tune the threshold probably we can get better performance**
 
-<p align="center"> <img src="img/image047.jpg"> </p>
+<p align="center"> <img src="img/image047.png"> </p>
 
 **\# Taking threshold as 0.45 gives the better result as compared to 0.5**
 
@@ -222,11 +222,11 @@ After getting the final LGBM model we can do the error analysis of the predictio
 
 ### I.   **Train final model and save model**
 
-<p align="center"> <img src="img/image049.jpg"> </p>
+<p align="center"> <img src="img/image049.png"> </p>
 
 **Final model validation score**
 
-<p align="center"> <img src="img/image051.jpg"> </p>
+<p align="center"> <img src="img/image051.png"> </p>
 
 ### J.  **Load saved model and make predictions on unseen/future data**
 
@@ -234,13 +234,13 @@ Here, we'll use df_test as the unseen, future data
 
 **Test Score**
 
-<p align="center"> <img src="img/image053.jpg"> </p>
+<p align="center"> <img src="img/image053.png"> </p>
 
 ### K. **Creating a list of customers who are the most likely to churn**
 
 Listing customers who have a churn probability higher than 70%. These are the ones who can be targeted immediately
 
-<p align="center"> <img src="img/image055.jpg"> </p>
+<p align="center"> <img src="img/image055.png"> </p>
 
 Got 124 customers who can leave the bank with more than 70% probability
 
