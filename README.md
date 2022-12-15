@@ -137,7 +137,7 @@ Using **RFE (Recursive Feature Elimination)** to check whether it gives us the s
 <p align="center"> <img src="img/image021.png"> </p>
 
 ### E.  **Baseline model Results**
-<p align="center"> <img src="img/Picture1.png"> </p>
+<p align="center"> <img src="img/Picture1.jpg"> </p>
 
 **Tree-based model performed best**
 
