@@ -1,0 +1,54 @@
+[2021-11-14 15:58:54,215] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2021-11-14 15:59:25,984] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2021-11-14 15:59:54,196] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2021-11-14 16:00:35,632] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2021-11-14 16:01:44,486] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2021-11-14 16:02:15,417] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2021-11-14 16:02:36,307] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2021-11-14 16:04:11,814] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2021-11-14 16:04:57,928] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2021-11-14 16:06:30,778] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-3} : Churn Prediction API Called
+[2021-11-14 16:09:31,815] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2021-11-14 16:09:48,449] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-3} : Churn Prediction API Called
+[2021-11-14 16:10:00,961] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-4} : Churn Prediction API Called
+[2021-11-14 16:10:13,284] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-5} : Churn Prediction API Called
+[2021-11-14 16:10:31,761] 127.0.0.1 requested http://localhost:5000/health-status DEBUG {flask_app_logger Thread-2} : Health check api version 1
+[2021-11-14 16:11:42,585] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2021-11-14 16:12:12,496] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2021-11-14 16:54:04,633] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-16 12:26:58,163] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-16 12:28:34,052] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-3} : Churn Prediction API Called
+[2022-11-16 12:29:03,954] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-4} : Churn Prediction API Called
+[2022-11-16 12:29:12,638] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-5} : Churn Prediction API Called
+[2022-11-16 12:30:25,380] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-6} : Churn Prediction API Called
+[2022-11-21 14:14:17,592] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-21 14:20:02,100] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-21 14:21:13,413] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-21 14:25:24,851] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-21 14:30:54,228] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-21 14:34:22,714] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-21 14:34:51,412] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-3} : Churn Prediction API Called
+[2022-11-21 15:10:17,225] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-21 15:10:54,010] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-21 15:40:03,154] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-21 15:41:39,505] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-21 15:42:00,838] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-21 16:19:12,930] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-21 16:20:42,985] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-3} : Churn Prediction API Called
+[2022-11-21 16:21:10,790] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-4} : Churn Prediction API Called
+[2022-11-22 11:18:43,865] 127.0.0.1 requested http://127.0.0.1:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-22 12:28:59,441] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-22 12:28:59,461] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction predictor Called
+[2022-11-22 12:29:12,634] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Done
+[2022-11-22 12:40:47,355] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-22 12:40:47,372] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction predictor Called
+[2022-11-22 12:40:59,937] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Done
+[2022-11-22 12:42:31,622] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-22 12:42:31,635] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction predictor Called
+[2022-11-22 12:42:44,175] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Done
+[2022-11-22 13:20:45,714] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-22 13:20:45,719] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction predictor Called
+[2022-11-22 13:20:51,565] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Done
+[2022-11-22 15:08:40,452] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction API Called
+[2022-11-22 15:08:40,465] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Churn Prediction predictor Called
+[2022-11-22 15:08:58,193] 127.0.0.1 requested http://localhost:5000/churn-prediction DEBUG {flask_app_logger Thread-2} : Done
