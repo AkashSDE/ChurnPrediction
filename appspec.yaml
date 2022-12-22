@@ -4,7 +4,7 @@ Resources:
       Type: AWS::ECS::Service
       Properties:
         # Environment variable will be replaced by Code Pipeline
-        TaskDefinition:  "arn:aws:ecs:us-east-1:815744959974:task-definition/churn:1"
+        TaskDefinition:  "#"
         LoadBalancerInfo:
           # Container name, port should match the container name, port in task defintion json
           ContainerName: "churn"
