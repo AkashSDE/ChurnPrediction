@@ -1,6 +1,6 @@
 {
   "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::815744959974:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::####:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
@@ -59,12 +59,12 @@
   ],
   "placementConstraints": [],
   "memory": "2048",
-  "taskRoleArn": "arn:aws:iam::815744959974:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::####:role/ecsTaskExecutionRole",
   "compatibilities": [
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:815744959974:task-definition/churn",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:####:task-definition/churn",
   "family": "churn",
   "requiresAttributes": [
     {
