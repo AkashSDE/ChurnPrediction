@@ -56,9 +56,14 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 
 -  Run the flask application and verify the two routes using postman.
 
-    ![Text Description automatically generated](media/f72db35391db185ab633b838ae63e9e7.png)
+<p align="center">
+<img src="media/f72db35391db185ab633b838ae63e9e7.png">
+</p>
 
-    ![Graphical user interface, text, application, email Description automatically generated](media/2b4d7921b74dd55517f79f00c8e82673.png)
+<p align="center">
+<img src="media/2b4d7921b74dd55517f79f00c8e82673.png" style="border:1px solid black;" >
+</p>
+
 
     Json data
 
