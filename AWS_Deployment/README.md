@@ -61,7 +61,7 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 </p>
 
 <p align="center">
-<img src="media/2b4d7921b74dd55517f79f00c8e82673.png" style="border:1px solid black;" >
+<img style="border:1px solid black;" src="media/2b4d7921b74dd55517f79f00c8e82673.png"/>
 </p>
 
 
