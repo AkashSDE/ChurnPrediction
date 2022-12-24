@@ -4,9 +4,9 @@
 
 Over the last few quarters, Bank XYZ has seen a significant number of clients close their accounts or migrate to other institutions. As a result, quarterly revenues have suffered significantly and yearly revenues for the current fiscal year may suffer significantly, leading stocks to fall and market cap to fall by X%.
 
-### **Objective:** Can we construct a model that predicts consumers who will churn in the near future with reasonable accuracy?
+**Objective:** Can we construct a model that predicts consumers who will churn in the near future with reasonable accuracy?
 
-### **Definition of churn:** A customer having closed all their active accounts with the bank is said to have churned. Churn can be defined in other ways as well, based on the context of the problem. A customer not transacting for 6 months or 1 year can also be defined as to have churned, based on the business requirements
+**Definition of churn:** A customer having closed all their active accounts with the bank is said to have churned. Churn can be defined in other ways as well, based on the context of the problem. A customer not transacting for 6 months or 1 year can also be defined as to have churned, based on the business requirements
 
 ### Mapping the real-world problem to an ML problem
 

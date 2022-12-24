@@ -4,23 +4,23 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 815744959974.dkr.ecr.us-east-1.amazonaws.com
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <AccountId>.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t churn_prediction:$(date +'%Y-%m-%d')  -t churn_prediction:latest .
-      - docker tag churn_prediction:$(date +'%Y-%m-%d') 815744959974.dkr.ecr.us-east-1.amazonaws.com/churn_prediction:$(date +'%Y-%m-%d')
-      - docker tag churn_prediction:latest 815744959974.dkr.ecr.us-east-1.amazonaws.com/churn_prediction:latest
+      - docker tag churn_prediction:$(date +'%Y-%m-%d') <AccountId>.dkr.ecr.us-east-1.amazonaws.com/churn_prediction:$(date +'%Y-%m-%d')
+      - docker tag churn_prediction:latest <AccountId>.dkr.ecr.us-east-1.amazonaws.com/churn_prediction:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 815744959974.dkr.ecr.us-east-1.amazonaws.com/churn_prediction:$(date +'%Y-%m-%d')
-      - docker push 815744959974.dkr.ecr.us-east-1.amazonaws.com/churn_prediction:latest
+      - docker push <AccountId>.dkr.ecr.us-east-1.amazonaws.com/churn_prediction:$(date +'%Y-%m-%d')
+      - docker push <AccountId>.dkr.ecr.us-east-1.amazonaws.com/churn_prediction:latest
       - echo Build Successfull
       # This step is mandatory for ECS code build blue green deployment.
-      - printf '{"ImageURI":"815744959974.dkr.ecr.us-east-1.amazonaws.com/churn_prediction:latest"}' > imageDetail.json
+      - printf '{"ImageURI":"<AccountId>.dkr.ecr.us-east-1.amazonaws.com/churn_prediction:latest"}' > imageDetail.json
 
 # File that will be added in the output artifacts in the code pipeline
 artifacts:
@@ -28,3 +28,4 @@ artifacts:
     - imageDetail.json
     - appspec.yaml
     - taskdef.json
+
