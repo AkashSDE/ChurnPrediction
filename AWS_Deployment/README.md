@@ -26,18 +26,18 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 
 <h2 style="text-align: center;">Step - 1</h2>
 <p align="center">
-<img src="media/dd6e132e02128b4e700cc944156c225e.png">
+<kbd><img src="media/dd6e132e02128b4e700cc944156c225e.png"></kbd>
 </p>
 
 
 <h2 style="text-align: center;">Step - 2</h2>
 <p align="center">
-<img src="media/5cfaa377b2b768d36c170e45696e506e.png">
+<kbd><img src="media/5cfaa377b2b768d36c170e45696e506e.png"></kbd>
 </p>
 
 <h2 style="text-align: center;">Step - 3</h2>
 <p align="center">
-<img src="media/13ae9fd83f4cbb35d493b32d1a24546f.png">
+<kbd><img src="media/13ae9fd83f4cbb35d493b32d1a24546f.png"></kbd>
 </p>
 
 1.  Create Flask Application
@@ -46,7 +46,7 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 -  Create app.py https://github.com/AkashSDE/ChurnPrediction/blob/main/FlaskApplication/src/app.py file which is the flask application with two routes /health-status and /churn-prediction. Exposed port is 5000.
 
 <p align="center">
-<img src="media/8899c3b27880f0080179ebcd9e48df9b.png">
+<kbd><img src="media/8899c3b27880f0080179ebcd9e48df9b.png"><kbd>
 </p>
 
 
@@ -57,11 +57,11 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 -  Run the flask application and verify the two routes using postman.
 
 <p align="center">
-<img src="media/f72db35391db185ab633b838ae63e9e7.png">
+<kbd><img src="media/f72db35391db185ab633b838ae63e9e7.png"></kbd>
 </p>
 
 <p align="center">
-<img style="border:3px so black;" src="media/2b4d7921b74dd55517f79f00c8e82673.png"/>
+<kbd><img src="media/2b4d7921b74dd55517f79f00c8e82673.png"/></kbd>
 </p>
 
 
@@ -116,19 +116,26 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
     }
 
 2.  **Dockerize** the Flask application – Test before deploying to AWS
-3.  Create the list of libraries along with the version and save it as requirement.txt\<https://github.com/AkashSDE/ChurnPrediction/blob/main/FlaskApplication/requirements.txt\>
+-  Create the list of libraries along with the version and save it as requirement.txt\<https://github.com/AkashSDE/ChurnPrediction/blob/main/FlaskApplication/requirements.txt\>
 
-    ![Graphical user interface, text Description automatically generated](media/c965a411d999de9c7935bff8fadd3e7c.png)
+<p align="center">
+<kbd><img src="media/c965a411d999de9c7935bff8fadd3e7c.png"/></kbd>
+</p>
 
-4.  Create gunicorn.sh\<https://github.com/AkashSDE/ChurnPrediction/blob/main/FlaskApplication/src/gunicorn.sh\> file to configure the flask application with WSGI sever as Flask application should not be run directly in the production server
+-  Create gunicorn.sh\<https://github.com/AkashSDE/ChurnPrediction/blob/main/FlaskApplication/src/gunicorn.sh\> file to configure the flask application with WSGI sever as Flask application should not be run directly in the production server
 
-    ![Graphical user interface, text, application Description automatically generated](media/586346d95116439935ff31addb1d815f.png)
+<p align="center">
+<kbd><img src="media/586346d95116439935ff31addb1d815f.png"/></kbd>
+</p>
 
-5.  Create docker file - https://github.com/AkashSDE/ChurnPrediction/blob/main/Dockerfile
 
-    ![Graphical user interface, text, application Description automatically generated](media/339dd096e3818edfa8904e445c34c00d.png)
+-  Create docker file - https://github.com/AkashSDE/ChurnPrediction/blob/main/Dockerfile
 
-6.  Build docker image and test the two routes again using postman client tool
+<p align="center">
+<kbd><img src="media/339dd096e3818edfa8904e445c34c00d.png"/></kbd>
+</p>
+
+-  Build docker image and test the two routes again using postman client tool
 -   Go to the folder where u kept the docker file and run the below command
 
     *\$ docker build -t churn-application .*
@@ -139,28 +146,37 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
     *\$ Docker run -it -p 5000:5000 churn-application*
 
 -   Go to postman client and test the two end points
-1.  Create Code Commit Repo in AWS
-2.  Create Code commit repository with name – **churn_prediction**
+3.  Create Code Commit Repo in AWS
+-  Create Code commit repository with name – **churn_prediction**
 
-    ![Graphical user interface, text, application, email Description automatically generated](media/8499e430457f080810e04fbe1fc68b3a.png)
+<p align="center">
+<kbd><img src="(media/8499e430457f080810e04fbe1fc68b3a.png"/></kbd>
+</p>
 
-    ![Graphical user interface, text, application, email Description automatically generated](media/db4c1e42208ee621ff4fa94145d8faae.png)
+<p align="center">
+<kbd><img src="media/db4c1e42208ee621ff4fa94145d8faae.png"/></kbd>
+</p>
 
-3.  The repository we created is a private repository. To connect with this repository, we need to create credentials.
+
+-  The repository we created is a private repository. To connect with this repository, we need to create credentials.
 
     Go to IAM service click user select user select Security Credentials tab
 
     Scroll down to HTTPS Git credentials for AWS CodeCommit and click on generate credentials
 
-    ![Graphical user interface, text, application Description automatically generated](media/ff7b51fa2ebc89afcfa880530c83ef92.png)
+    <p align="center">
+<kbd><img src="media/ff7b51fa2ebc89afcfa880530c83ef92.png"/></kbd>
+</p>
 
     Create new credentials and download the credentials – get username and password in the csv file
 
-4.  Clone the repository in local
+-  Clone the repository in local
 
     Copy the HTTPS URL
+    <p align="center">
+<kbd><img src="media/dfd4b60eecaf938405cec2ef4501f7c9.png"/></kbd>
+</p>
 
-    ![Graphical user interface, text, application Description automatically generated](media/dfd4b60eecaf938405cec2ef4501f7c9.png)
 
     In the local CLI run the below command
 
@@ -168,21 +184,21 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 
     it will ask for username and password which you can get from csv file which is downloaded in step b.
 
-5.  Copy all the files and folder (exclude img folder and Readme file) from the below url to your local repository folder
+-  Copy all the files and folder (exclude img folder and Readme file) from the below url to your local repository folder
 
     ![Graphical user interface, text, application, email Description automatically generated](media/2d602e76c611135a4bf6e98f97a48db5.png)
 
     [**https://github.com/AkashSDE/ChurnPrediction**](https://github.com/AkashSDE/ChurnPrediction)
 
-6.  Do git commit and git push to the aws code repository
-7.  Create testbranch and push all the changes to test branch as well
+-  Do git commit and git push to the aws code repository
+-  Create testbranch and push all the changes to test branch as well
 
     We will use this testbranch to deploy and create pipeline
 
 ![Graphical user interface, text, application Description automatically generated](media/1740d91c22e5f2ae28c01fee550caabe.png)
 
-1.  AWS Code build project creation
-2.  Go to AWS console and search for **code build projects** click on **create build** projects
+4.  AWS Code build project creation
+-  Go to AWS console and search for **code build projects** click on **create build** projects
 
     Provide the below configuration
 
@@ -206,7 +222,7 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 
     Click on create build project
 
-3.  Create buildspec.yaml file
+-  Create buildspec.yaml file
 
     This yaml file contains steps to be done for building the docker image and then pushing the docker image to ecr repository
 
@@ -216,7 +232,7 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 
 replace \<AccountId\> with your AWS account ID
 
-1.  Create ECR repository
+5.  Create ECR repository
 
     ECR repository is like docker hub which is used to store the docker image built at code build stage.
 
@@ -224,7 +240,7 @@ replace \<AccountId\> with your AWS account ID
 
     ![Graphical user interface, text, application, email Description automatically generated](media/7425c58d3acc06238a1f7480928590c6.png)
 
-    ![Graphical user interface, text, application, Teams Description automatically generated](media/fc603442e2ca1ceff76d5a8ec382b76c.png)’
+    ![Graphical user interface, text, application, Teams Description automatically generated](media/fc603442e2ca1ceff76d5a8ec382b76c.png)
 
     Go to code build service and click on start build
 
@@ -236,7 +252,7 @@ replace \<AccountId\> with your AWS account ID
 
     ![Graphical user interface, application Description automatically generated](media/63b7fd6bbf8559aa0df75c76c10c040d.png)
 
-2.  ECS cluster Definition
+6.  ECS cluster Definition
 
     Search for elastic container service in aws console Click on **Clusters** in the left panel and then click on **Create Cluster** select cluster template **Networking only**  provide cluster name as **churn-cluster** and click on **create**
 
@@ -248,7 +264,7 @@ replace \<AccountId\> with your AWS account ID
 
     **New cluster is created**
 
-3.  ECS Task definition
+7.  ECS Task definition
 
     We need to create the task definition to run containers on the cluster that is created in the above steps.
 
@@ -284,7 +300,7 @@ replace \<AccountId\> with your AWS account ID
 
     New Task definition churn is created
 
-4.  ECS service creation
+8.  ECS service creation
 
     Deploy Task definition into cluster
 
@@ -294,7 +310,7 @@ replace \<AccountId\> with your AWS account ID
 
     First, we need to create load balancer then we can create Services in ECS
 
-5.  Create a Load balancer
+9.  Create a Load balancer
 -   Create security group
 
     ![Graphical user interface, text, application, email Description automatically generated](media/97f17f6a549d162125eb86ed8a71a9e1.png)
@@ -331,7 +347,7 @@ replace \<AccountId\> with your AWS account ID
 
     Click on Create load balancer
 
-1.  Now go to aws console and search for ECS click on clusters
+-  Now go to aws console and search for ECS click on clusters
 
     Click on churn-cluster select Services tab click on create
 
@@ -383,7 +399,7 @@ replace \<AccountId\> with your AWS account ID
 
     ![Graphical user interface, text, application, email Description automatically generated](media/1d06d8aee553fa555d18c7ca4110a479.png)
 
-2.  Code deploy service
+9.  Code deploy service
 
     Go to aws console search code deploy service click on applications
 
@@ -437,7 +453,7 @@ replace \<AccountId\> with your AWS account ID
 
     ![Graphical user interface, application Description automatically generated](media/a7c6a0d4fa38cb0f52f073d818f7307b.png)
 
-3.  Code Pipeline
+10.  Code Pipeline
 
     Now we will create code pipeline so for every commit the code pipeline gets triggered and new version of application is deployed.
 
