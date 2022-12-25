@@ -190,7 +190,7 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 </p>
 
 
-    [**https://github.com/AkashSDE/ChurnPrediction**](https://github.com/AkashSDE/ChurnPrediction)
+[**https://github.com/AkashSDE/ChurnPrediction**](https://github.com/AkashSDE/ChurnPrediction)
 
 -  Do git commit and git push to the aws code repository
 -  Create testbranch and push all the changes to test branch as well
