@@ -40,7 +40,7 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 <kbd><img src="media/13ae9fd83f4cbb35d493b32d1a24546f.png"></kbd>
 </p>
 
-#### 1.  **Create Flask Application**
+## 1.  Create Flask Application
 -  Save all the custom transformer classes – We have created transformer classes for **categorical encoding, adding features and custom scaler**. To do all the transformation of the test dataset we need to save these classes. It is saved under ML_Pipiline folder. https://github.com/AkashSDE/ChurnPrediction/tree/main/FlaskApplication/src/ML_Pipeline
 -  Run engine.py https://github.com/AkashSDE/ChurnPrediction/blob/main/FlaskApplication/src/Engine.py file which will take the training dataset and train the best model with best configuration. It will the save the model in the output folder https://github.com/AkashSDE/ChurnPrediction/tree/main/FlaskApplication/output
 -  Create app.py https://github.com/AkashSDE/ChurnPrediction/blob/main/FlaskApplication/src/app.py file which is the flask application with two routes /health-status and /churn-prediction. Exposed port is 5000.
@@ -115,7 +115,7 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 
     }
 
-2.  **Dockerize** the Flask application – Test before deploying to AWS
+## 2.  **Dockerize** the Flask application – Test before deploying to AWS
 -  Create the list of libraries along with the version and save it as requirement.txt\<https://github.com/AkashSDE/ChurnPrediction/blob/main/FlaskApplication/requirements.txt\>
 
 <p align="center">
@@ -146,7 +146,7 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
     *\$ Docker run -it -p 5000:5000 churn-application*
 
 -   Go to postman client and test the two end points
-3.  Create Code Commit Repo in AWS
+## 3.  Create Code Commit Repo in AWS
 -  Create Code commit repository with name – **churn_prediction**
 
 <p align="center">
@@ -201,7 +201,7 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 <kbd><img src="media/1740d91c22e5f2ae28c01fee550caabe.png"/></kbd>
 </p>
 
-4.  AWS Code build project creation
+## 4.  AWS Code build project creation
 -  Go to AWS console and search for **code build projects** click on **create build** projects
 
     Provide the below configuration
@@ -256,13 +256,13 @@ To deploy a model on AWS which predicts whether the customer is going to churn i
 </p>
 replace AccountId with your AWS account ID
 
-5.  Create ECR repository 
+## 5.  Create ECR repository 
 
-    ECR repository is like docker hub which is used to store the docker image built at code build stage.
+ECR repository is like docker hub which is used to store the docker image built at code build stage.
 
-    Search Elastic container repository in the aws console Click Create Repository and provide below configuration
+Search Elastic container repository in the aws console Click Create Repository and provide below configuration
 
-    <p align="center">
+<p align="center">
 <kbd><img src="media/7425c58d3acc06238a1f7480928590c6.png"/></kbd>
 </p>
 
@@ -272,20 +272,21 @@ replace AccountId with your AWS account ID
 
 
 
-    Go to code build service and click on start build
+Go to code build service and click on start build
 <p align="center">
 <kbd><img src="media/ab4f48b6d920f1f6c7a2315b72957d03.png"/></kbd>
 </p>
 
-    Click tail logs to see the progress
+Click tail logs to see the progress
 
-    After build is successful, we can see the docker image got created inside ecr repository
+After build is successful, we can see the docker image got created inside ecr repository
+<p align="center">
+<kbd><img src="media/63b7fd6bbf8559aa0df75c76c10c040d.png"/></kbd>
+</p>
 
-    ![Graphical user interface, application Description automatically generated](media/63b7fd6bbf8559aa0df75c76c10c040d.png)
+## 6.  ECS cluster Definition
 
-6.  ECS cluster Definition
-
-    Search for elastic container service in aws console Click on **Clusters** in the left panel and then click on **Create Cluster** select cluster template **Networking only**  provide cluster name as **churn-cluster** and click on **create**
+Search for elastic container service in aws console Click on **Clusters** in the left panel and then click on **Create Cluster** select cluster template **Networking only**  provide cluster name as **churn-cluster** and click on **create**
 <p align="center">
 <kbd><img src="media/0fda4387377cedae7fa533fc1ef36c3b.png"/></kbd>
 </p>
@@ -300,9 +301,9 @@ replace AccountId with your AWS account ID
 
 **New cluster is created**
 
-7.  ECS Task definition
+## 7.  ECS Task definition
 
-    We need to create the task definition to run containers on the cluster that is created in the above steps.
+We need to create the task definition to run containers on the cluster that is created in the above steps.
 <p align="center">
 <kbd><img src="media/dd55137c016c2cf3ebf3007f7868c117"/></kbd>
 </p>
@@ -315,7 +316,7 @@ replace AccountId with your AWS account ID
 <kbd><img src="media/7d28e4fdbf31c48a7b53e0d75b3534d5.png"/></kbd>
 </p>
 
-    **ecsTaskExecutionRole definition**
+**ecsTaskExecutionRole definition**
 <p align="center">
 <kbd><img src="media/6601240c781135628e1ec115f52c4d6e.png"/></kbd>
 </p>
@@ -333,24 +334,24 @@ replace AccountId with your AWS account ID
 <kbd><img src="media/5c913ce8a8151f65113449e45f0dcd2b.png"/></kbd>
 </p>
 
-    Click on add container
+Click on add container
 <p align="center">
 <kbd><img src="media/19836c3ebaab839c7285a133fc8da64d.png"/></kbd>
 </p>
 
-    Leave other fields blank
+Leave other fields blank
 <p align="center">
 <kbd><img src="media/df76711b7bb5876cfdbf0ffd07159c0a.png"/></kbd>
 </p>
 
-    Click on create
+Click on create
 <p align="center">
 <kbd><img src="media/f630ce6be03d78ab599dfb6e52c1a748.png"/></kbd>
 </p>
 
 **New Task definition churn is created**
 
-8.  ECS service creation
+## 8.  ECS service creation
 
     Deploy Task definition into cluster
 
@@ -360,7 +361,7 @@ replace AccountId with your AWS account ID
 
     First, we need to create load balancer then we can create Services in ECS
 
-9.  Create a Load balancer
+## 9.  Create a Load balancer
 -   Create security group
 <p align="center">
 <kbd><img src="media/97f17f6a549d162125eb86ed8a71a9e1.png"/></kbd>
@@ -390,7 +391,7 @@ Click next and click **Create target group**
 
 -   Create Load balancer
 
-    Select Application Load Balancer
+Select Application Load Balancer
 <p align="center">
 <kbd><img src="media/15092210568814fb12ba7a0558d597dd.png"/></kbd>
 </p>
@@ -416,13 +417,13 @@ Click next and click **Create target group**
 </p>
 
 
-    Click on Create load balancer
+Click on Create load balancer
 
 -  Now go to aws console and search for ECS click on clusters
 
-    Click on churn-cluster select Services tab click on create
+Click on churn-cluster select Services tab click on create
 
-    Configure service as shown in the figure below
+Configure service as shown in the figure below
 <p align="center">
 <kbd><img src="media/263f920f10dbc0b7597d8dd6fef917dd.png"/></kbd>
 </p>
@@ -446,7 +447,7 @@ Click next and click **Create target group**
 </p>
 
 
-    Click on **next step**
+Click on **next step**
 <p align="center">
 <kbd><img src="media/34e09f490e1349c1ee6d4c005efdca06.png"/></kbd>
 </p>
@@ -471,26 +472,26 @@ Click next and click **Create target group**
 <kbd><img src="media/a2bb6c3e67f3e9c12c541578b736af0e.png"/></kbd>
 </p>
  
-    Click on next step
+Click on next step
 <p align="center">
 <kbd><img src="media/db4e8bc0ed09fc4773f4618aca9300dd.png"/></kbd>
 </p>
   
-    click on next step
+click on next step
 
-    Review all the details and click on create Service
+Review all the details and click on create Service
 <p align="center">
 <kbd><img src="media/e13a9d6cf09e8902ef34b66b16a44b74.png"/></kbd>
 </p>
 
 
-    Under Tasks Tab we can see our task definition running
+Under Tasks Tab we can see our task definition running
 <p align="center">
 <kbd><img src="media/ceb22aa914c68e1e13be3a4e0336c2ef.png"/></kbd>
 </p>
 
 
-    Using postman client check if the two routes are working or not – use the LB DNS name
+Using postman client check if the two routes are working or not – use the LB DNS name
 <p align="center">
 <kbd><img src="media/d8861c6f87c43b98b2cf68ee55a4a877.png"/></kbd>
 </p>
@@ -500,38 +501,38 @@ Click next and click **Create target group**
 </p>
 
 
-9.  Code deploy service
+## 9.  Code deploy service
 
-    Go to aws console search code deploy service click on applications
+Go to aws console search code deploy service click on applications
 
-    Creating ecs service automatically creates an application for us in code deploy service
+Creating ecs service automatically creates an application for us in code deploy service
 <p align="center">
 <kbd><img src="media/78a09e85281797d72da1cc3e28ba8f38.png"/></kbd>
 </p>
    
 
-    We can create multiple deployment groups
+We can create multiple deployment groups
 <p align="center">
 <kbd><img src="media/45956feac4f81680f786b67c25633d22.png"/></kbd>
 </p>
    
-    First, we will deploy the already created deployment group
+First, we will deploy the already created deployment group
 
-    Click on the deployment group
+Click on the deployment group
 <p align="center">
 <kbd><img src="media/19f3b28ba9926246d689fc92a6768d66.png"/></kbd>
 </p>
  
-    Click on create deployment
+Click on create deployment
 <p align="center">
 <kbd><img src="media/41635f08ecf02148a8b659c51e3f475e.png"/></kbd>
 </p>
    
-    Appspec editor apspec yaml we need to provide the task definition details so that aws knows where to deploy the deployment groups
+Appspec editor apspec yaml we need to provide the task definition details so that aws knows where to deploy the deployment groups
 
-    Find appspec.yaml github url
+Find appspec.yaml github url
 
-    Copy the task definition arn from the json details of task definition
+Copy the task definition arn from the json details of task definition
 <p align="center">
 <kbd><img src="media/eeea2c5029a9588b30cc642a5de464c9.png"/></kbd>
 </p>
@@ -549,9 +550,9 @@ Click next and click **Create target group**
 </p>
   
 
-    Click on create deployment
+Click on create deployment
 
-    We will see the deployment status
+We will see the deployment status
 <p align="center">
 <kbd><img src="media/43e0d1ea41e9bebd7e5f2103bd067518.png"/></kbd>
 </p>
@@ -561,7 +562,7 @@ Click next and click **Create target group**
 </p>
     
 
-    In the ecs task we can see the two task once the new task comes up other task will go down
+In the ecs task we can see the two task once the new task comes up other task will go down
 <p align="center">
 <kbd><img src="media/ee36e549f1f9688f34e0a84aeedf383f.png"/></kbd>
 </p>
@@ -570,17 +571,17 @@ Click next and click **Create target group**
 <kbd><img src="media/722ec3edd32b3acd9719f469263688ac.png"/></kbd>
 </p>
     
-    Once the replacement is 100% ready, we can click the terminate original task set
+Once the replacement is 100% ready, we can click the terminate original task set
 <p align="center">
 <kbd><img src="media/a7c6a0d4fa38cb0f52f073d818f7307b.png"/></kbd>
 </p>
     
 
-10.  Code Pipeline
+## 10.  Code Pipeline
 
-    Now we will create code pipeline so for every commit the code pipeline gets triggered and new version of application is deployed.
+Now we will create code pipeline so for every commit the code pipeline gets triggered and new version of application is deployed.
 
-    Open code pipeline service from aws console
+Open code pipeline service from aws console
 <p align="center">
 <kbd><img src="media/b1ff6de9be6e5102be53aa32ce84274f.png"/></kbd>
 </p>
