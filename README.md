@@ -1,5 +1,7 @@
 # **Customer Churn Prediction**
 
+### This is just overview please check the complete jupyter notebook [here](https://github.com/AkashSDE/ChurnPrediction/blob/main/JupyterNotebook/Churn_Prediction.ipynb)
+
 ## **1. Problem Statement**
 
 Over the last few quarters, Bank XYZ has seen a significant number of clients close their accounts or migrate to other institutions. As a result, quarterly revenues have suffered significantly and yearly revenues for the current fiscal year may suffer significantly, leading stocks to fall and market cap to fall by X%.
