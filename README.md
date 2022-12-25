@@ -1,6 +1,6 @@
 # **Customer Churn Prediction**
 
-### This is just overview please check the complete jupyter notebook [here](https://github.com/AkashSDE/ChurnPrediction/blob/main/JupyterNotebook/Churn_Prediction.ipynb)
+### This article is just an overview please check the complete jupyter notebook [here](https://github.com/AkashSDE/ChurnPrediction/blob/main/JupyterNotebook/Churn_Prediction.ipynb)
 
 ## **1. Problem Statement**
 
